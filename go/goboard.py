@@ -39,10 +39,10 @@ class GoString():
     	Return a new Go string containing all stones in both strings.
     	'''
         assert go_string.color == self.color # It asserts that both GoString instances have the same color.
-		 # - Combines their stones using a union operation.
-		 # - Computes a new set of liberties that includes the liberties from both strings
-		 # minus any stones that are now part of the merged string.
-		 # - Returns a new instance of GoString representing the merged state.
+		# - Combines their stones using a union operation.
+		# - Computes a new set of liberties that includes the liberties from both strings
+		# minus any stones that are now part of the merged string.
+		# - Returns a new instance of GoString representing the merged state.
         pass
 
     @property

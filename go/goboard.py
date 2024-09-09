@@ -136,7 +136,7 @@ class Move():
         '''
         This move places a stone on the board.
         '''
-        pass
+        return Move(point=point)
 
     @classmethod
     def pass_turn(cls):

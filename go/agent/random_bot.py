@@ -11,6 +11,7 @@ class RandomBot(Agent):
     def select_move(self, game_state):
         '''
         Choose a random valid move that preserves our own eyes.
+        Returns: Move.pass_turn() or Move.play(...)
         '''
         # - Initializes an empty list called candidates to store potential valid moves.
 		# - Iterates through each point on the board.

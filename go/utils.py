@@ -36,12 +36,14 @@ def point_from_coords(coords):
     '''
     human coordinates to point:
     "B2" -> Point(2,2)
+    Returns: Point
     '''
     pass
 
 def coords_from_point(point):
     '''
     Point(2,3) -> "C2"
+    Returns: str
     '''
     pass
 

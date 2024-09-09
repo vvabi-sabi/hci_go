@@ -37,6 +37,7 @@ class GoString():
     def merged_with(self, go_string):
         '''
         Return a new Go string containing all stones in both strings.
+        Returns: new GoString
         '''
         assert go_string.color == self.color # It asserts that both GoString instances have the same color.
         # - Combines their stones using a union operation.
@@ -49,12 +50,14 @@ class GoString():
     def num_liberties(self):
         '''
         A property that returns the number of liberties.
+        Returns: int
         '''
         pass
 
     def __eq__(self, other):
         '''
         Checks for equality between two GoString instances.
+        Returns: bool
         '''
         # - It checks if other is an instance of GoString.
         # - Compares the color, stones, and liberties attributes of both instances for equality.
@@ -100,24 +103,28 @@ class Board():  # <1>
     def is_on_grid(self, point):
         '''
         Checks if a given point is within the boundaries of the board.
+        Returns: bool
         '''
         pass
 
     def get(self, point):
         '''
         Retrieves the color of the stone at a specified point on the board.
+        Returns: "white" or "black"
         '''
         pass
 
     def get_go_string(self, point):
         '''
         Returns the entire string of stones at a point: a GoString if there is a stone on that point or else None.
+        Returns: GoString
         '''
         pass
 
     def __eq__(self, other):
         '''
         Compares two board instances for equality.
+        Returns: bool
         '''
         pass
 
@@ -142,6 +149,7 @@ class Move():
     def pass_turn(cls):
         '''
         This move passes.
+        Returns: Move
         '''
         pass
 
@@ -149,6 +157,7 @@ class Move():
     def resign(cls):
         '''
         This move resigns the current game
+        Returns: Move
         '''
         pass
 
@@ -161,6 +170,7 @@ class GameState():
     def apply_move(self, move):
         '''
         Return the new GameState after applying the move.
+        Returns: new GameState
         '''
         # - If the move is a play, it creates a deep copy of the current board and
         # places the stone for the next player at the specified point.
@@ -173,6 +183,7 @@ class GameState():
     def new_game(cls, board_size):
         '''
         Initializes a new game with a specified board size.
+        Returns: new GameState
         '''
         # - It creates a new Board instance with the specified dimensions.
         # - Finally, it returns a new instance of GameState, setting the initial player to 'black'
@@ -182,6 +193,7 @@ class GameState():
     def is_move_self_capture(self, player, move):
         '''
         Checks if a given move would result in self-capture for the specified player.
+        Returns: bool
         '''
         # - If the move is not a play, it immediately returns False.
         # - It creates a deep copy of the current board and places the player's stone at the specified point of the move.

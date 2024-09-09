@@ -11,6 +11,9 @@ class Player:
 
     @property
     def other(self):
+        '''
+        Returns: Player
+        '''
         pass
 
 
@@ -20,6 +23,9 @@ class Point():
         pass
 
     def neighbors(self):
+        '''
+        Returns: list
+        '''
         pass
 
     def __deepcopy__(self, memodict={}):
